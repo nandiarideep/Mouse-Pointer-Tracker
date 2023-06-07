@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Mouse Pointer Tracker</title>
+</head>
+<body>
+    <div id="output">move the mouse on the screen to get the coordinates</div>
+
+    <script defer>
+        let output = document.getElementById("output");
+
+    window.addEventListener("mousemove", (e) =>{
+    let xPos = e.clientX;
+    let yPos = e.clientY;
+
+    output.innerHTML = `<div><span>X: </span>${xPos}px</div><div><span>Y: </span>${yPos}px</div>`;
+});
+    </script>
+</body>
+</html>
